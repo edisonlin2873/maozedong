@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mao Zedong Timeline</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-image: url('mao-zedong.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #e6e6e6;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ccc;
+        }
+        
+        .timeline-container {
+            position: relative;
+            padding: 2rem 0;
+            width: 100%;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .timeline {
+            position: relative;
+            display: flex;
+            min-width: max-content;
+            padding: 0 5rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 120px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #c52121;
+        }
+        
+        .event {
+            position: relative;
+            width: 300px;
+            margin-right: 3rem;
+            transition: all 0.3s ease;
+        }
+        
+        .event-content {
+            width: 280px;
+            min-height: 350px;
+            background-color: rgba(30, 30, 30, 0.8);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 50px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid #c52121; /* Added red outline */
+        }
+        
+        .event-content:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border-color: #c52121;
+            z-index: 10;
+            
+        }
+        
+        .event-year {
+            font-size: 1.5rem;
+            color: #c52121;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .event-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        
+        .event-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        
+        .event-description {
+            color: #ccc;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            max-height: 90px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .event-content:hover .event-description {
+            max-height: 3000px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .event {
+                width: 250px;
+                margin-right: 2rem;
+            }
+            
+            .event-content {
+                width: 230px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <header class="header">
+            <h1>The Life of Mao Zedong</h1>
+            <p>Explore the key events in the life of Mao Zedong, founding father of the People's Republic of China by Edison Lin</p>
+        </header>
+        
+        <div class="timeline-container" id="timeline-container">
+            <div class="timeline" id="timeline">
+                <!-- Event 1 -->
+                <div class="event">
+                    <div class="event-content">
+                        <div class="event-year">1893</div>
+                        <h3 class="event-title">Birth</h3>
+                        <img src="mao.birthplace.jpg" alt="Mao Zedong's birthplace" class="event-image">
+                        <div class="event-description">
+                            <p>Mao Zedong was born on December 26, 1893, in Shaoshan, Hunan Province, China. He was born into a wealthy peasant family, as his father was a successful
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="event">
+                    <div class="event-content">
+                        <div class="event-year">1911</div>
+                        <h3 class="event-title">Revolution and Education</h3>
+                        <img src="red-book.webp" alt="1911 Revolution in China" class="event-image">
+                        <div class="event-description">
+                            <p>Mao experienced the 1911 Revolution that overthrew the Qing Dynasty. He enrolled and continued his education at the Changsha Middle school, where he began developing his political ideas. He read books on Marxism, 
+                                nationalism, and economics. At Peking University, though only working as a library assistant, he immersed himself in radical political thought and met key individuals who fueled his belief that China’s future lay in overthrowing the old order. These influences sparked Mao’s belief that true change would come not from elites, but from mobilizing the peasantry in a massive upheaval.
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="event">
+                    <div class="event-content">
+                        <div class="event-year">1921</div>
+                        <h3 class="event-title">Communist Party Founding</h3>
+                        <img src="e15-453.jpg" alt="CCP Founding" class="event-image">
+                        <div class="event-description">
+                            <p>The Chinese Communist Party was founded by Chen Duxiu and Li Dazhao, but Mao founded the branch in Changsha. Small branches were held all over China, and 13 delegates, Mao one of them, came together to discuss their future. Additionally, in August 2021, Mao founded the Self-Study University, where readers could access revolutionary literature.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 4 -->
+                <div class="event">
+                    <div class="event-content">
+                        <div class="event-year">1927</div>
+                        <h3 class="event-title">Autumn Harvest Uprising</h3>
+                        <img src="autumnuprising.webp" alt="Autumn Harvest Uprising" class="event-image">
+                        <div class="event-description">
+                            <p>After the Kuomintang-Communist alliance broke down, Mao led the Autumn Harvest Uprising in Hunan. Though initially unsuccessful, this marked the beginning of Mao's military leadership and guerrilla warfare strategy. Mao was quickly appointed as leader of the Red Army, but ultimately was defeated and only 1000 communist survivors remained.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 5 -->
+                <div class="event">
+                    <div class="event-content">
+                        <div class="event-year">1934-1935</div>
+                        <h3 class="event-title">The Long March</h3>
+                        <img src="pc-1961-006-detail.jpg" alt="The Long March" class="event-image">
+                        <div class="event-description">
+                            <p>Mao led Communist forces on the famous Long March, a 6,000-mile retreat from Kuomintang forces. Although at the end, only 8000 of 100000 members remained, Mao was attributed to their survival, granting him the status of undisputed leader of the communist party. </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 6 -->
+                <div class="event">
+                    <div class="event-content">
+                        <div class="event-year">1937-1945</div>
+                        <h3 class="event-title">War Against Japan</h3>
+                        <img src="chiang.avif" alt="War against Japan" class="event-image">
+                        <div class="event-description">
+                            <p>During the Second Sino-Japanese War, Chiang Kai-shek was occupied with the Japanese and his forces were weakened, allowing Mao's forces to grow stronger and stronger.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 7 -->
+                <div class="event">
+                    <div class="event-content">
+                        <div class="event-year">1946-1949</div>
+                        <h3 class="event-title">Chinese Civil War</h3>
+                        <img src="1945_Chiang_Kai-shek_inspected_Chinese_soldiers_with_shoes_made_of_straw.jpg" alt="Chinese Civil War" class="event-image">
+                        <div class="event-description">
+                            <p>After WWII, civil war resumed between the Communists and Kuomintang. The communist forces had a total of 3.2 million troops. Mao's forces eventually defeated Chiang Kai-shek's Nationalist government, forcing them to retreat to Taiwan.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 8 -->
+                <div class="event">
+                    <div class="event-content">
+                        <div class="event-year">1949</div>
+                        <h3 class="event-title">Founding of the People's Republic</h3>
+                        <img src="640px-Mao_Proclaiming_New_China.jpg" alt="Proclamation of the PRC" class="event-image">
+                        <div class="event-description">
+                            <p>On October 1, 1949, Mao proclaimed the founding of the People's Republic of China from atop Tiananmen Gate. This marked the beginning of Communist rule in China with Mao as the country's paramount leader.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 9 -->
+                <div class="event">
+                    <div class="event-content">
+                        <div class="event-year">1958-1962</div>
+                        <h3 class="event-title">The Great Leap Forward</h3>
+                        <img src="glfpeasants-e1724809867170.jpg" alt="Great Leap Forward" class="event-image">
+                        <div class="event-description">
+                            <p>Mao initiated the Great Leap Forward, an economic campaign aimed at rapidly transforming China from an agrarian economy to an industrial powerhouse. The food production decreased rapidly, causing immense starvation and famine. Civilians were forced to eat dogs, rats, bark, and even each other. In the end, approximately 30 million starved as a result.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 10 -->
+                <div class="event">
+                    <div class="event-content">
+                        <div class="event-year">1966-1976</div>
+                        <h3 class="event-title">Cultural Revolution</h3>
+                        <img src="Cultural_Revolution_poster.jpg" alt="Cultural Revolution" class="event-image">
+                        <div class="event-description">
+                            <p>Mao launched the Cultural Revolution in 1966, where he aimed to diminish any anti-communist forces and maintain his totalitarian authority. Many youth rose up, fighting against their own families, teachers, and others. Violence plagued China, and 1-2 million died as a direct result.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 12 -->
+                <div class="event">
+                    <div class="event-content">
+                        <div class="event-year">1976</div>
+                        <h3 class="event-title">Death and Legacy</h3>
+                        <img src="maodeath.webp" alt="Mao Memorial" class="event-image">
+                        <div class="event-description">
+                            <p>As a result of his poor habits, Mao's health declined rapidly, and he died on 9 September 1976, at the age of 82. While he has both accomplishments and faults, a clear consensus cannot be reached, and views of Mao are heavily opiniated. Yet, he remains one of the most influential 20th century leaders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get elements
+        const timelineContainer = document.getElementById('timeline-container');
+        const timeline = document.getElementById('timeline');
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                timelineContainer.scrollBy({
+                    left: -600,
+                    behavior: 'smooth'
+                });
+            } else if (e.key === 'ArrowRight') {
+                timelineContainer.scrollBy({
+                    left: 600,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    </script>
+</body>
+</html>
